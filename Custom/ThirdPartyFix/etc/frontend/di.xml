@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+
+    <type name="Magento\Framework\Search\Request\Cleaner">
+        <plugin name="Custom_ThirdPartyFix::toMakeChangesInCleaner"
+                type="Custom\ThirdPartyFix\Plugin\Framework\Search\Request\CleanerPlugin"
+                disabled="false"/>
+    </type>
+
+
+    <type name="Magento\Framework\Search\Request\Builder">
+        <plugin name="Custom_ThirdPartyFix::toAddSortInRequestBuilder"
+                type="Custom\ThirdPartyFix\Plugin\Framework\Search\Request\BuilderPlugin"
+                disabled="false"/>
+    </type>
+
+
+    <!-- Virtual Types may not work in FE -->
+
+</config>
